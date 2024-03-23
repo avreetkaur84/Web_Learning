@@ -1,0 +1,22 @@
+1. npm create vite@latest - install the vite
+2. write the project name, choose the framework - react, choose the language - javascript.
+3. cd to project name folder.
+4. npm install
+5. Enter npm run dev to strat the terminal
+
+
+1. Creating a component
+    function title() {
+        return (content- heading, paragarh...);
+    }
+
+    1. We can return only one component at a time.
+    2. You have to render the created component in the App() component which is the main componenet in teh form of HTML tag. -----        <Title></Title>
+    3. But you can create a simple opening and closing tag and inside that tag you can write multiple components that you want to return.
+    4. You have to store each component in the different jsx file, so craete a different file for Title component by the name Title.jsx
+    5. Import and export the component -
+        1. Export the title form jsx file by - export default Title
+        2. Import title in the App.jsx file by - import Title form "./Title.jsx"
+
+
+*** <Price oldPrice={oldPrices[idx]} newPrice={newPrices[idx]}/>  ***

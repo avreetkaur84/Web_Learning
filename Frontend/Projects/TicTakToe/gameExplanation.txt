@@ -1,0 +1,56 @@
+HTML
+nav - it is kept totally simple because this is a one page game.
+
+1st div - "gameContainer"
+This is the main div inside which there is main game as well as information and other functions related to this game which are stored in separate divs.
+
+2nd div - "container"
+Whole game is stored in this div.
+This div is futher divided into 9 divs which basically represents the 9 boxes of tic tac toe.
+    9 divs - "box"
+    these are simply the 9 boxes of the game.
+
+    br-0, bt-0, bl-0, bb-0 are the utility classes used for vanishing the border from the partcular side.
+
+    div - "boxtext" inside span
+    this is made to display the value of "x" or "0".
+
+3rd div - "gameInfo"
+This div contains the information related to the game along with reset, quit and other functions.
+There are futher 2 divs and one main heading inside this div.
+    2 divs - 
+
+
+
+CSS
+1. Before starting any project, firtlty, set the margin and padding value equal to zero.
+2. google fonts are used in whole game.
+
+nav - 1. align-items center is used to center the text horizontally.
+
+nav ul - list-style-type none is used to remove all the styling from the list including bullets and stuff.
+
+gameContainer - 1. justify-content center is used to center the text vertically.
+
+container - 1. grid display is used because we have to arrange the boxes in grid format, so it is much easier to use grid than flex.
+2. grid-template-rows is used for knowing how much boxes you need row wise and 10vw is the unit for measuring width and is used for reponsiveness.
+
+box - 1. font-size is used for setting the font size of "x" and "0".
+2. display flex is given inside the box to center the "x" and "0" because they are stored inside boxtext which is inside box. 
+
+There are four utility classes which are used to vanish the boder from the certain side. like - 
+1. br-0 is used for setting border right zero.
+2. bl-0 is used for setting border left zero.
+3. bt-0 is used for setting border top zero.
+4. bb-0 is used for setting border bottom zero.
+
+
+
+****study "vw" unit of measurement which is ued for responsiveness****
+
+JAVASCRIPT
+1. Firstly, simply audio are stored in different variables.
+
+changeTurn - 1. it is an arrow function made for changing turns.
+2. Terniary operator is used inside it. 
+if turn === x, then it will return 0, otherwise it will return x.

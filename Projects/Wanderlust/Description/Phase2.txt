@@ -1,0 +1,118 @@
+In this phase we will create different models for our database.
+
+1. Review: 
+    ---Create review model, which includes comments, rating, created At.
+    1. Create a listing file "review.js", and define the schema that you want to have.
+    --- review model will have one to many relationship with the listing model, so create another element "reviews" in the listing schema.
+    2. Create a review form in the show.ejs page.
+    3. Submit the form- create the post route.
+    4. Form Validation - 
+        1. client side - 
+            1. set the fields to required in the form.
+            2. Apply the bootstrap styling to the form like novalidate and class="needs-validation"
+        2. Server side - 
+            1. create the joi schema in the schema.js file
+    5. Show the reviews under the post on the show.ejs page
+    6. Style the review using bootstrap, like show them in the card format.
+
+    ---Handle the deletion of the reviews.
+    1. Create a delete button for deleting the review.
+    2. Delete the review from both, Listing and Review database.
+    3. Hnadle the case, where if you delete a particular listing, then the reviews associated with that listing should get automatically deleted from the review database. 
+        ---- for this create a post middleware in the listing schema.
+
+2. Express Router
+    --- It is used to structure the routes.
+        1. Listing Routes Structuring
+            1. Make a new folder "router" and create a new file "listing.js" 
+            2. Cut and paste all the listing routes from app.js file to listing.js file present in the router folder.
+            3. Export the router from listing file and require it in the app.js file.
+            4. Cut the listing from the route path from the listing.js file.
+            5. Now, copy and paste the wrapAsync, Listing and some other things that you have required in the app.js file.
+            6. Cut and paste the validateListing function in the listing.js filr from app.js file.
+            7. Change the path of required things pasted in the listing.js file by adding one more dot in their path.
+        
+        2. Review Route the Structuring
+            1. Create another file reviews.js in the router folder.
+            2. Do the same things as you did in the listing route structuring to structure the reviews routes.
+
+-----Cookies - they basically store the information of the user.
+-----Session - it is used to use the information of the user that he gives during session on the different pages of the website.
+-----Connect-Flash - it is used to show the alert messages or pop-ups on the screen, when user makes any change for which connect-flash is defined. It is shown only once. As once the user refreshes the page, the messages vanishes.
+
+3. Session
+    1. Install the express-session package    ---   npm i express-session.
+    2. Require the express session in the app.js file.
+    3. Define the session options and use the session with the help of app.use.
+    4. To check whether session is working or not, go to inspect - applications - cookies - and if you see the option connect-sid, then it means session is working properly.
+    5. Cookie -
+        1. Add the cookie in the session options by defining the expires and maxAge for your cookie, like for how much time you want your cookie to restore the information.
+    
+4. Connect-Flash - 
+    1. Install the connect-flash -----   npm i connect-flash
+    2. Require this in the app.js file
+    3. In the listing.js folder, where all the routes are placed, define flash in the post route, so that whenever a new listing is made, it appears.
+    4. Now create a middleware in the app.js file, which can take you to the flash message.
+    5. Then in the index.ejs template, place the flash message thing at the top, so that appers on the screen.
+    6. Create another file "flash.ejs" in the includes folder, then add that file to the boilerplate and remove the success message from the index.ejs page.
+    7. Add the styling to the document by using bootstrap alert.
+
+5. Authentication and Authorization
+    1. We never store the passwords as it is. We store them in hashed form.
+    2. Before saving the passwords in the website "salting" is done and then it is saved by converting it to hashed form. Different companies have different salt to add in the passwords, which is basically comn=bination of characters.
+    3. For doing the authentication, means for the login and sign up functioning, we will use inbuilt tool of node.js called "Passport". It will do hashing, salting and other stuff for us automatically.
+    
+    1. Passport - 
+        --- passportjs.org/packages for checking different ways with which you can implement authentication.
+        1. npm i passport
+        2. npm i passport-local
+        3. npm i passport-local-mongoose
+
+        1. User model
+            1. Create new file "user.js" in the models folder.
+            2. Require mongoose and passport-local-mongoose, also define the userSchema, without defining the username and password as it will be automatically implemented by the passport-mongoose with the hwlp of plugin used in file.
+
+            ------Baic settings for using passpord.
+                1. require the three passport components in the app.js file.
+                2. in app.js, initialise passport and session using app.use and also declare the authenticate method.
+                3. declare the serialise and deserialise function to store and delete the user information.
+                4. Use the register function to register the user data.
+                5. Create a user data and save the data in the database from teh app.js file just to check whether eveything is working is fine.
+
+            ********Authentication*******
+
+            3. user.js file in router folder
+            ----Sign up-----
+                1. Create a user.js file in the router folder to set up the routers for authentication. Require the necesarry things in the app.js file and n teh user.js file.
+                2. Create another folder named "users" in the views folder and then create file "signup.ejs" to create the form in it for signing in.
+                3. In the user.js file create the get and post route for the signup form.
+            -----Login-----
+                1. Create the get and post route for login in the user.js router file.
+                2. Create the login.ejs file in the user folder peresent in views folder, to create the login form.
+
+            4. Connecting Login route
+            -----If the user is logged in or has an account, only then he can create the listings and can't delete other people's listing and reviews.
+                1. In the listing.js, in the "new" router for creating the listing, add the condition, if user is logged in only then show the new listing form or else redirect to login page.
+            ---- Create a file "middlewares.js" to store the middleware.
+                2. In middleware, copy the code for creating new listing condition. Don't forget to require the middleware in the listing.js file.
+                3. pass the middleware for login inthe other listing routes, like of create, edit, update, delete.
+            
+            5. Logout
+                1. Create another route for logout in the user.js router file.
+                2. logout() function will do all the work for logging out, no need to write the code from scratch.
+            
+            ---- Add all the three - sign in, login and logout in the navbar, but add it with the condition, if user is signed in then only show log out open and vise versa.
+                
+                *After this is some other changes made related to above three options to make website more dynamic, like redirecting to certain path after signing in or login, additional middlewares were also created.
+
+            ********Authorisation********
+            1. This basically means what kind of ownership you are having in your website, like what to delete in website or where to post and stuff.
+                1. Listing ownership
+                    1. Firstly, you have to make an owner of the listing
+                        1. For already made listings, add the owner name in the index.js file which is made to initialize the data in the database.
+                        2. For the new user make the changes in the listing.js file and other files also like show.ejs, if you want to show the owner anem on the website also.
+                    2. Hide the edit and delete button for the users who are not the owner of the particular listing, to implement the authorisation. For this, in the show.ejs, where edit and delete button is made, just aply the condition.
+                    3. After this, you have to add different middlewares and there is no need to hide the buttons because you have added the conditions in the main routes only, so, there will be flash message if a person will try to edit wrong listing.
+            
+                2. Review ownership
+                    1. 

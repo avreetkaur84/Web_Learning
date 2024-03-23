@@ -1,0 +1,38 @@
+/* Footer styles */
+.footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 10px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .footer-section {
+    padding: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p {
+    font-size: 0.9em;
+  }
+  
+  .footer-bottom {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+  }
+  
+  .about {
+    width: 350px;
+    margin-right: 90px;
+    text-justify: distribute;
+  }

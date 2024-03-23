@@ -1,0 +1,36 @@
+Routes
+1. get - /
+2. get - /listings - to show all the tasks
+3. get - /listings/:id - to view all the info about the tasks
+4. get - /listings/new - to create a new tasks
+5. post - /listings - to post the newly created listings
+6. get - /listings/:id/edit - to edit
+7. put - /listings/:id - to update the listing in the database
+
+
+files and folders created
+1. app.js - main file where all te routes are written
+
+2. node_modules - all the installed modules are here
+        Install packages
+            1. npm init -y
+            2. npm i express
+            3. npm i ejs
+            4. npm i mongoose
+            5. method Override
+            6. npm i ejs-mate
+
+3. models - for storing database schemas
+    1. listings - task description 
+
+4. init - for storing and inserting data to database
+    1. data.js - for storing data
+    2. index.js - for inserting the data    
+
+5. views - for storing all ejs templates
+    1. listings - tasks templates
+        1. index.js
+        2. show.js
+        3. new.js
+        4. edit.js
+

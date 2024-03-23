@@ -1,0 +1,27 @@
+Todo App
+
+level - 2
+
+inp.addEventListener - This function is made to add a new task to the existing tasks list.
+1. "change" is triggered when initial and final value in the input box is not same means when ever we will write something in it.
+2. createElement will create a new li.
+3. Along with list item, we have to add a delete button also next to list item, so delbtn is made with the help of createElement.
+4. classList will add a class to delBtn called delete so that we can access all the delete buttons present in the list with the same class.
+5. item is the li (task name), so we can append delBtn to item as we want delBtn to be placed next to the task name.
+6. item (li) is appended to ul because ul contains all the li.
+7. inp value is set to blank so that after task name is added to the list we can again have blank input box to add the new task.
+
+ul.addEventlistener - ul is selected here because we can't directly access the delete button because addEventListener only works for the existing elements not for the new elements that we will add. Means it will delete "eat" and "sleep" task that are already present in the list but will not delete the new tasks that we will make.
+since li is present in the ul which already exists, so addEventListener function will work here.
+1. In the ul we have li and delete buttons both. But we want task to be deleted when we will click the delete button, so thats why if condition is applied.
+2. To exactly access the delete button event.target.nodeName is used which is equal to the value of the button.
+3. We have to delete the task name which is the list item, so we have accessed the list item with the help of parentElement as event.target (button) parent is li.
+4. remove function will delete the list.
+
+
+
+---Explanation for the code written in the comments---
+delBtns - after adding the delBtn to the li, it does not delete the task after we click it because we have not aplied any functionality to the button. So, this delBtns portions used for adding functionality to the button.
+1. for loop is used to access all the delete buttons.
+2. par is made to access the list item (task name) because with the help of delete button we want to delete task name.
+3. remove function is used to delete the par(li).

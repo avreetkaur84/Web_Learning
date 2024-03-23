@@ -1,0 +1,58 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+.header {
+    display: flex;
+    border: 2px solid white;
+    background-color: rgb(228, 224, 224);
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.headBtn {
+    margin: 10px;
+}
+.headerBtn {
+    padding: 8px;
+    width: 125px;
+}
+
+.boxes {
+    display: flex;
+}
+
+#grey {
+    background-color: rgb(194, 188, 188);
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#white {
+    background-color: white;
+}
+
+#blue {
+    background-color: blue;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.colorBtn {
+    padding-inline: 0px;
+    padding-block: 0px;
+    margin: 10px;
+    border-color: black;
+    border: 2px solid black;
+    height: 100px;
+    width: 100px;
+}

@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.card {
+    border: 2px solid black;
+    height: 400px;
+    width: auto;
+    display: flex;
+}
+
+.info {
+    background-color: blue;
+    width: 50%;
+}
+
+.facts {
+    background-color: red;
+    width: 50%;
+}
+
+#para {
+    border: 2px solid black;
+    height: 190px;
+    width: 507px;
+    margin: 25px 54px;
+    font-size: 36px;
+}

@@ -1,0 +1,13 @@
+.heroSection {
+    background-image: url('images/heroSection.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 350px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+  }
+  

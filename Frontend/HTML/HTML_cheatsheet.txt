@@ -1,0 +1,191 @@
+#HTML FORMATTING ELEMENTS
+1. <b> - Bold text
+2. <strong> - Important text
+3. <i> - Italic text
+4. <em> - Emphasized text
+5. <mark> - Marked text
+6. <small> - Smaller text
+7. <del> - Deleted text
+8. <ins> - Inserted text
+9. <sub> - Subscript text
+10. <sup> - Superscript
+
+
+#HTML QUOTATION
+1. <abbr> - Defines an abbreviation or acronym
+2. <address> - Defines contact information for the author/owner of a document
+3. <bdo> - Defines the text direction
+4. <blockquote> - Defines a section that is quoted from another source
+5. <cite> - Defines the title of a work
+6. <q> - Defines a short inline quotation
+
+
+#HTML LINKS
+1. <a href="url">link text</a>
+2. Types of link: 1. Unvisited Link
+			2. Visited Link
+			3. Active Link
+3. target: specifies where to open the linked document
+	1. _self - Opens the document in same window/tab as it was clicked
+	2. _blank - Opens the document in a new window or tab
+	3. _parent - Opens the document in the parent frame
+	4. _top - Opens the document in the full body of the window
+ex: <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+4. Relative URL: a link to a page within the same website
+ex: <p><a href="images/do more.jpg">Work Hard</a></p>
+
+5. Absolute URL: link another full website page
+ex: <p><a href="https://www.w3.org/">W3C</a></p>
+
+6. Mail: to create a link that opens the user's email program (to let them send a new email)
+ex: <p><a href="mailto:avreetkaur084@gmail.com">Send Mail</a></p>
+
+7. Button as link: 
+ex- <p><button onclick = "document.location = 'doc/HTML_cheatsheet.txt'">HTML Cheatsheet</button></p>
+
+8. Link titles: title attribute specifies extra information about an element.
+ex: <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+ 
+9. Image as link: 
+
+
+#CREATING BOOKMARKS
+1. <a href="page2.html">Jump to Page 2</a>
+2. <h2 id="C4">Chapter 4</h2>
+
+
+#IMAGE - TOPIC PENDING...
+
+#Favicon- a small image displayed next to the page title in the browser tab.
+ex: <link rel="shortcut icon" href="images/do more.jpg"
+type="image/x-icon">
+
+
+#TABLE
+1. <table>	 : Defines a table
+2. <th>	 : Defines a header cell in a table
+3. <tr>	 : Defines a row in a table
+4. <td>	 : Defines a cell in a table
+5. <caption> : Defines a table caption 
+6. <colgroup>: Specifies a group of one or more columns in a table for formatting
+7. <col>	 : Specifies column properties for each column within a <colgroup> element
+8. <thead>	 : Groups the header content in a table
+9. <tbody>	 : Groups the body content in a table
+10.<tfoot>	 : Groups the footer content in a table
+
+#LIST
+
+
+#BLOCK ELEMENTS - A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the element.
+EX: <p>, <div>
+1. <div>: it is often used as a container for other HTML elements and is also used for a block of content. It has no required attributes, but style, class and id are common.
+
+#INLINE ELMENTS - An inline element does not start on a new line.
+EX: <span>
+1. <span>: it is an inline container used to mark up a part of a text, or a part of a document. Style, class and id are common attributes for this element.
+ex: <p>My mother has <span style="color:blue;font-weight:bold;">blue</span> eyes
+
+
+#Forms in HTML
+1. <form action="/action.php"> (form content) <form/>
+----Input----
+1. <input type="" >
+* type can be of different types-
+a) text
+b) password
+c) number
+d) time
+e) color
+ex: <input type="text"/>
+
+2. Placeholder 
+<input type="text" placeholder="Enter name" >
+
+3. Label
+<label for="username"> Enter your username: </label>
+<input type="text" id="username" placeholder="username">
+
+3. Button: <button> submit </button>
+*There are different types of buttons-
+a) submit
+b) button
+c) reset
+ex: <button type="submit"> submit </button>
+
+*creating button using input-
+<input type="submit">
+<input type="submit" value="click me">
+
+4. Checkbox
+<input type="checkbox" name="age" id="age" checked />
+<label for="age"> I am 18+ </label>
+
+5. Radio button
+ex:
+<input type="radio" name="fruit" id="apple" value="apple"/>
+<label for="apple">Apple</label>
+<input type="radio" name="fruit" id="mango" value="mango"/>
+<label for="mango">mango</label>
+<input type="radio" name="fruit" id="banana" value="banana"/>
+<label for="banana">banana</label>
+
+*only name should be same in the radio button
+
+6. Select (dropdown)
+<select name="profession" id="profession">
+	<option value="student"> Student </option>
+	<option value="dev"> Developer </option>
+</select>
+
+7. Range
+<label for="volume"> Volume </label>
+<input type="range" min="0" max="100" name="vol" />
+
+8. Text Area 
+<label for="feedback"> Please provide your valuable feedback: </label>
+<textarea id="feedback"></textarea>
+
+
+
+
+
+
+
+
+
+
+#CSS
+1. Style
+2. background-color
+3. color
+4. font-family
+5. font size
+6. text-align
+7. border
+8. padding - to provide space between text and border
+9. margin - to provide space outside the border.
+
+#CSS kinds
+1. Inline: using style element inside HTML elements
+ex: <p style="color:red;">A red paragraph.</p>
+
+2. Internal: using style element in the <head> section
+ex: <head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+
+3. External: using <link> element to link an external CSS file.
+ex: <link rel="stylesheet" href="/html/styles.css">
+
+
+
+
+
+
+
+
+

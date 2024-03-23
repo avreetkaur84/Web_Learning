@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    color: aliceblue;
+}
+
+.header {
+    display: flex;
+    border: 2px solid white;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.headBtn {
+    margin: 10px;
+}
+.headerBtn {
+    padding: 8px;
+    width: 125px;
+}
+
+.projectBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: aliceblue;
+    font-weight: 700;
+    border-radius: 10px;
+}

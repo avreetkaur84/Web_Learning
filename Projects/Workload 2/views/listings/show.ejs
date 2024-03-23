@@ -1,0 +1,18 @@
+<% layout("/layout/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">  <br><br>
+    <h3>Info about a task</h3>
+    <p><%= listing.taskName %></p> 
+    <p><%= listing.taskDescription %></p> 
+    <p><%= listing.taskCategory %></p> 
+    <p><%= listing.priority %></p> 
+    <p><%= listing.deadline %></p> 
+    <p><%= listing.completionStatus %></p> 
+
+    <a href="/listings/<%= listing._id %>/edit" class="btn btn-primary col-2">Edit</a> <br><br>
+    <form action="/listings/<%= listing._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-primary col-2">Delete</button>
+    </form>
+</div>
+</div>

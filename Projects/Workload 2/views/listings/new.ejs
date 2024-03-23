@@ -1,0 +1,44 @@
+<% layout("/layout/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">  <br><br>
+    <h3>Create a new Listing</h3>
+    <form method="POST" action="/listings">
+
+        <div class="mb-3">
+            <label class="form-label" for="title">Title</label>
+            <input name="listing[taskName]" placeholder="Add task name" type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="description">Description</label>
+            <input name="listing[taskDescription]" placeholder="Add task description" type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="category">Category</label>
+            <input name="listing[taskCategory]" placeholder="Add task category" type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="priority">Priority</label>
+            <input name="listing[priority]" placeholder="Add the prioprity level of task" type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="deadline">Deadline</label>
+            <input name="listing[deadline]" placeholder="Add task deadline" type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="status">Status</label>
+            <input name="listing[completionStatus]" placeholder="Add task completion status" type="text" class="form-control">
+        </div> 
+
+        <button type="button" class="btn btn-primary col-2">Add</button> <br><br>
+    </form>
+    </div>
+</div>
+
+<!-- Can show options for choosing the priority level -->
+<!-- completion status should be added by us automatically, instead of asking user -->

@@ -1,0 +1,38 @@
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const Movie = require("./models/movie.js");
+
+const MONGO_URL = "mongodb://127.0.0.1:27017/movieRecomendation";
+
+main()
+    .then(() => {
+        console.log("connected to DB");
+    }).catch((err) => {
+        console.log(err);
+    });
+
+async function main() {
+    await mongoose.connect(MONGO_URL);
+}
+
+app.get("/", (req, res) => {
+    res.send("Hi, I am Root!!");
+});
+
+app.get("/testMovie", async (req, res) => {
+    let sampleMovie = new Movie({
+        movie_id: 123,
+        title: "My Demon",
+        cast: "Jeon Jeong, Do Dae",
+        crew: "Bai lu, Xu Kai"
+    });
+
+    await sampleMovie.save();
+    console.log("Sample was saved");
+    res.send("Successful Testing");
+}) 
+
+app.listen(8080, () => {
+    console.log("Server is listening to port 8080");  
+});

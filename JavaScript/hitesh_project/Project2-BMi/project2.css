@@ -1,0 +1,45 @@
+body {
+    background-color: rgb(41, 40, 40);
+    color: white;
+}
+
+.header {
+    display: flex;
+    border: 2px solid white;
+    background-color: rgb(228, 224, 224);
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+.headBtn {
+    margin: 10px;
+}
+.headerBtn {
+    padding: 8px;
+    width: 125px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.calculation {
+    margin: 20px 50px;
+}
+
+.btnn {
+    margin: 30px 0px;
+}
+
+.btn {
+    width: 270px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.guide {
+    width: 250px;
+    margin: 35px 130px 0px 0px;
+}

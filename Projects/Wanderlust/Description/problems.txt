@@ -1,0 +1,5 @@
+1. Problem in error handling in the add new listing form. Like user should not be allowed to fill numbersin the title or other places where string format is there, but async wrap and middleware for this error handling are not working.
+2. Delete button present in show.ejs page is not functioning properly, it is throwing error.
+3. Review is not getting deleted. It is throwing error "Review is required" but already review is present.
+4. New listing is not being added to the website, something went wrong error is being displayed.
+5. 

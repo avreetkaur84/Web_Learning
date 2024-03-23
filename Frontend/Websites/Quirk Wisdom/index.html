@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quirk Wisdom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="webPage">
+        <header class="header">
+            <div class="logo">
+                <img src="Images/logo.jpg" alt="QuirkWisdom" id="logo">
+                <p id="webName">Quirk Wisdom</p>
+            </div>
+
+            <nav class="navabr">
+                <ul class="nav-links">
+                    <li>Home</li>
+                    <li>Categories</li>
+                    <li>About Us</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+
+            <div class="search-container">
+                <select id="category">
+                    <option value="jokes">Jokes</option>
+                    <option value="quotes">Quotes</option>
+                    <option value="cat-facts">Cat Facts</option>
+                    <option value="food-facts">Food Facts</option>
+                </select>
+                <input type="text" id="search-box" placeholder="Search for content...">
+                <button id="search-button">Search</button>
+                <div id="auto-suggest"></div>
+            </div>
+
+        </header>
+        <main>
+            <div class="heroSection">heroSection</div>
+            <div class="content">content</div>
+        </main>
+        <footer>footer</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+----For making simple projects
+    1. from the tailwind css website, open get started
+    2. from the CDN - copy the script tag and add it in your html file - <script src="https://cdn.tailwindcss.com"></script>
+
+---For installing plugin(tailwind CLI) means for produnction level - 
+    1. npm install -D tailwindcss postcss autoprefixer
+    2. npm i vite
+    3. npx tailwindcss init -p
+    4. inside tailwind.config.js - set - content: ["*"],
+    5. Create style.css and add -  1. @tailwind base;
+                                   2. @tailwind components;
+                                   3. @tailwind utilities;
+    6. Inside package.json file - add - "scripts" : {
+                                            "start": "vite"
+                                        },
+    7. Use "npm run start" - to start the terminal

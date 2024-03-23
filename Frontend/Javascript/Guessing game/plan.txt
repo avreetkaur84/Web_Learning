@@ -1,0 +1,7 @@
+Guess Game
+In this game, firstly user is asked to enter a maximum number in which range he wants to guess the number.
+After this, computer automatically generates a random number and stores it in constant variable.
+Then user is asked to guess the number.
+If user enters the wrong number, then hint is added. Means if the number that user guessed was small then user will be notified to try again to guess a larger number and vice versa.
+If user enters the right number then he is declared as the winner and automatically game ends.
+If user is unable to guess the right number and wants to leave the game then user can simply type "quit" to quit the game.

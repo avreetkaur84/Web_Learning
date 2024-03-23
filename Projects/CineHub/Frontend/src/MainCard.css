@@ -1,0 +1,14 @@
+.MainHead {
+    text-align: center;
+    color: #d20d17
+}
+
+.card {
+    margin-left: 57px;
+    margin-bottom: 45px;
+}
+
+.genreDescription {
+    width: 255px;
+    height: 50px;
+}

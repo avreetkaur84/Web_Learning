@@ -1,0 +1,6 @@
+Project name: Wanderlust
+This is going to be an end to end website in which there will be options  for hotel booking and other things that are required for travelling.
+It is replica of airbnb
+
+This project is going to be completed in 3 phases.
+

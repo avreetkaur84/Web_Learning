@@ -1,0 +1,4 @@
+1. Map pfunction is not being applied to the components. It is not giving error but nothing is being displayed on the screen also.
+2. Unable to pass the objects in the component like array is passed. It is not giving any specific error but not is being displayed on the screen.      -----       
+     // let options2 = {a: "High-Tech", b: "Durable", c:"Fast"};   //Object
+3. Activity file also didn't display anything on the screen, neither shown any error.

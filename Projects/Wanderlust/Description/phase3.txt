@@ -1,0 +1,38 @@
+MVC model - models, b=views, controllers
+
+1. Controllers - 
+    --It is used to store the main backend code, so we will cut the callbacks from the files that are stored in the router folder and will paste them in the files made in controller folder.
+    --It is made to make the code mode readable and easy to understand.
+    --- Make a controller folder and create a new file "listings.js".
+    1. in listing.js file, paste all the callbacks by making individual function for each callback.
+    --- Do the same for review and users.
+
+2. router.route - this is used to combine the route with the same path in a single function or request.
+    1. implement this feature on the listing.js, user.js and review.js routes present in the router folder.
+
+3. Re-styling the raing component
+    1. For this we will use "starability" library.
+    2. It is in github, copy the code from github and paste it in the public folder new css file.
+    3. Do changes in th eshow route also.
+
+4. Uploading image instead of pasting link.
+    1. Make the chnages in the new.ejs form, add the new div of upload image and delete the image link div.
+    2. npm i multer - to parse the data that is in other form like img, pdf and require it. Them the add the image function in the post request route.
+
+5. Cloud step up
+    1. We are using "cloudinary"
+    ----  create a .env file to store the credentials of your project.
+    2. For using the credentials stored in .env file you need another library dotenv - install using - npm i dotenv
+    3. Require the dotenv at the top of your app.js file.
+    4. from teh cloudinary, access the cloudname, api, api secret and store it in the env file.
+    ----for accessing the cloudinary in code, install - 1. npm i cloudinary
+                                                        2. npm i multer-storage-cloudinary
+    --- make a new file "cloudConfig.js", where you can write about what kind of format or things you want to store in your cloud storage.
+    5. Require the cloud in the listing.js file of the router folder.
+    ----problem has occured in adding the image to the website, so, error is coming. 
+
+6. Adding map
+    --- I have skipped this part for the time being as it was asking for the credit info.
+
+7. Fixing home page
+    1. 

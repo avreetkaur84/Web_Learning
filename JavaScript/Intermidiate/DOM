@@ -1,0 +1,6 @@
+const myh2 = document.querySelectorAll('.h2Heading');
+
+hh2.forEach((h) => {
+    h.style.backgroundColor = "pink";
+    h.style.borderRadius = "15px"
+})

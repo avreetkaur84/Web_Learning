@@ -1,0 +1,141 @@
+Getting Started:
+  1. Database Setup
+  2. Rest API's for CRUD
+
+1. Basic Setup
+    -- Install packages
+        1. npm init -y
+        2. npm i express
+        3. npm i ejs
+        4. npm i mongoose
+    
+    -- Create app.js file
+        1. require the packages
+        2. Set up the root for the website
+        3. Connect to Database
+    --Database
+    Create a separate folder named "models" for storing all the models.
+        1. Creating a Model named "Listing". 
+            Listing model will store the information about the place that people can visit. Place can be anything (apartment, flat, house, villa, hotel)
+            --Things included in listing model
+                1. title
+                2. description
+                3. image  -- (url)
+                4. price
+                5. location
+                6. country
+
+    --Return to app.js and create routes-
+        1. Require the listing model in app.js
+        2. Route to test listing model 
+        3. in the app.js file just randomly create a collection to check whether data is being stored in the database or not.
+    
+        2. Initialise data
+            1. create a init folder in which you will initialise all the data.
+            2. Create a file data.js and store all the sample data in it in the array. Means write all the documents in it.
+                -- All the data is stored in the sample listing array.
+                -- sampleListing array is exported at last.
+            3. Create index.js file and in this file all the code regarding initialising the data is written.
+                --You have to require mongoosh and its connection again.
+        
+        --Back to app.js file
+        3. Create the index route (/listigs)
+            1. Route is of type GET as it will fetch all the listings.
+            2. the query for fetching all the documents from the database is written.
+            3. This route is connected to index.ejs where the template for printing all the listing is designed.
+        
+        --Index.ejs file
+            1. This file is made for designing the template to display the listing information on the screen.
+                --Template design
+                    1. for loop is used access all the documents .
+                    2. Title is converted into link, so that all the information related to that title can be displayed on new page.
+                        -- show route is created for moving to the specific listing data.
+
+        4. Show route
+            1. This route to made to read or display all the data that a specific listing has.
+            2. It is used for performing "read" CRUD operation.
+                -- show.ejs file is created for designing the template to display the information that will be displayed after link is clicked.
+        
+        5. New route and create route
+            --New Route
+                1. new route is used for displaying the form that will be used for creating a new document or listing.
+                --in new.ejs file the template for the new form is designed.
+                --  new route is written above show route because if we write new route below show route then it thorws an error beacuse in show route a variable for id is passed, so by default, compiler search for the variaable in the new route also.    (I guess there is some mistake in this eplanation.)
+
+            --Create Route
+                --Create route is used for adding the newly created document to the database.
+                --It will receive POST request as it is
+                posting or adding the new data to the database.
+
+        6. Edit and Update route
+            --Edit route
+                1. It is used for landing on the page where edit form will be displayed.
+                2. It will use GET request
+                3. To edit a form, new
+
+            --Update route
+                1. This route is used for updating the existing document on the basis of the chnages that are made in the edit form.
+                2. It will use PUT request
+
+        7.Delete Route 
+            --To delete any listing
+
+### Till here we are done with our basic setup.
+
+###Now, we will add some styling to our website and for this we will use ejs-mate 
+
+2. ejs-mate
+    1. npm i ejs-mate   -- command to install it.
+    2. Require ejs-mate in the app.js file
+    3. craete a layout folder in the views folder
+    4. Create a file with name "biolerplate" where all the sample code that is common for all the pages will be stored, means we want that all pages should look like, so code is written in this file for that.
+    5. Add bootstrap in the boilerplate.  Copy link for cs and js.
+
+    -- Adding different styling components 
+        1. Make a inludes folder in views.  In this folder, you will store code for different parts of website like navbar, footer and so on.
+            1. navbar
+                1. Copy a navbar from bootstrap
+                2. Add icon from google awesome and to goole awesome, redirect to google awesome cdn and copy the first link.
+                3. Then adjust the styling of navbar by adding or deleting classes provided in bootstrap or by using css.
+                4. include the navbar in the boilerplate.ejs
+        
+            2. footer
+                --just like navbar, make the footer and design it.  include it in boilerplate.
+        
+        
+3. Form Validation - it is used to check whether the data entered by the user is in the correct format and under the constraints. 
+    It is of two types - 
+        1. Client side validation - to check, data that user is entering is in the correct format.
+        2. Server side validation - to check, data is entered according to the schema and to handle the error that can occur while entering the data.
+
+    1. client side validation-
+        --- Do this for the new.ejs form.
+        1. Open the bootstrap and go to validation. 
+        2. then add novalidation to the form and also add class=needs-validation to give the bootstrap validation features.
+        3. create a js folder in the public folder, then create script.js file in it.
+        4. Paste the js code from the bootstrap that is written in the bootstrap validation page.
+        5. add the script.js file to the bootstrap as the source. 
+        6. Create another div in the each form field with class valid and invalid, where you can write your description regaring what should appear if the info entered by user is right is wrong.
+        --- Do the same for the edit.ejs form.
+
+    2. Server side validation
+        --- Create a folder named utils and create two files in it - 
+            1. ExpressError.js - in this ExpressError class will extend the Error class to use its features for handling the errors.
+            2. wrapAsync.js - in this write the code for wrapAsync function which is used for replacing the try and catch block. 
+        1. Different kind of errors are handled using middlewares and asyncWrap function.
+
+    3. Create a error.ejs file template to show the errors in good way!
+        --- with the help of bootstrap, design is added to this file.
+
+    4. Schema Validation error
+        -- To handle the individual field related errors from the schema.
+        -- We will use one tool called joi, to handle the schema erros as it is tedious to write the conditions for each field of the schema, so joi will do this task for us.
+        1. Install the joi by using "npm i joi".
+        -- Create a new file named schema.js 
+        -- This file is created to create the schema for the server side validation which will be done with the help of joi,   earlier we have created the schema for the mongodb, but this schema is for server side validation.
+        2. Write the schema code and joi code in schema.js file.
+        3. Require the schema.js. Write code accrodingly.
+        4. Convert the joi schema validation into middleware.
+
+
+                        -----------------PHASE 1 IS COMPLETED :)-------------------

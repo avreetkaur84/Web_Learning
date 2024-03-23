@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Qs</title>
+
+  <style>
+    * {
+      font-family: Courier New;
+      text-align: center;
+    }
+
+    .Facebook h1 {
+      color: #1b74e4;
+    }
+
+    .Facebook #searchbtn {
+      background-color: black;
+      color: white;
+    }
+
+    .Facebook .userbtn {
+      background-color: aqua;
+    }
+
+    .Pq #mainTopic{
+      color: blue;
+    }
+
+    h1, h3, h5{
+      font-style: Georgia;
+    }
+
+    .Pq .para{
+      color: white;
+      background-color: cornflowerblue;
+    }
+
+    .End button{
+      background-color: purple;
+      color: azure;
+    }
+
+    .End button:hover{
+      background-color: yellow;
+      color: blue;
+    }
+
+    .Pq .para:nth-child(odd){
+      color: yellow;
+    }
+
+    h1::first-letter{
+      color: red;
+    }
+
+    .End #yes:checked + label{
+      color: darkgreen;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="Facebook">
+    <h1>Facebook</h1>
+    <button class="userbtn">Log in</button>
+    <button class="userbtn">Register</button>
+    <br><br>
+    <label for="search">Search</label>
+    <input placeholder="search your friends" id="search" />
+    <button id="searchbtn">Search</button>
+  </div>
+  <hr>
+
+  <div class="Pq">
+    <h1 id="mainTopic">CSS Practice</h1>
+    <h3>Let's learn about selector.</h3>
+    <!-- Paragraph 1 -->
+    <p class="para">There are multiple selectors in css.</p>
+    <!-- Paragraph 2 -->
+    <p class="para">Some of them include class selector, id selector etc.</p>
+    <!-- Paragarph 3 -->
+    <p class="para">And we can also combine these too.</p>
+  </div>
+  <hr>
+
+  <div class="End">
+    <h5>Did you like the practice set?</h5>
+    <input type="checkbox" id="yes">
+    <label for="yes">Yes</label>
+    <br>
+    <button>Learn next!</button>
+  </div>
+
+</body>
+
+</html>

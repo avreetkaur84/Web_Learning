@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: red;
+    border: 2px solid black;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 43px;
+}
+
+.logo {
+    display: flex;
+    /* margin: 5px 15px; */
+    align-items: center;
+}
+
+#webName{
+    font-size: 1.8rem;
+    margin: 0px 13px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.heroSection {
+    background-color: blue;
+    border: 2px solid black;
+    height: 300px;
+}
+.content
+ {
+    background-color: green;
+    border: 2px solid black;
+    height: 250px;
+}
+
+footer {
+    background-color: yellow;
+    border: 2px solid black;
+    height: 50px;
+}

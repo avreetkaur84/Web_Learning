@@ -1,0 +1,32 @@
+<% layout("/layout/boilerplate") %>
+
+<body>
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src="/images/heroSection.jpg" class="d-block mx-lg-auto img-fluid" alt="WorkLoad Management" width="700" height="500" loading="lazy">
+      <!-- <img src="/images/heroSection.jpg" alt=""> -->
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Effortlessly Manage Your Workload</h1>
+      <p class="lead">Your All-in-One Workload Management Solution.</p>
+      <p class="lead">Take control of your tasks, meet deadlines, and boost your productivity. Manage your workload like a pro, both personally and professionally. Get started now and experience the difference!</p>
+    </div>
+</div>
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+  <% for(let listing of allListings) { %>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= listing.taskName %>
+        </h5>
+        <p class="card-text">
+          <%= listing.taskDescription %>
+        </p>
+        <a href="/listings/<%= listing._id %>" class="btn btn-primary">More Info</a>
+      </div>
+    </div>
+  <%}%>
+</div>
+
+</body>

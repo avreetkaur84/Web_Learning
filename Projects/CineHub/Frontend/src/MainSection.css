@@ -1,0 +1,11 @@
+.mainHead {
+    text-align: center;
+    color: #e90643;
+    margin: 40px;
+}
+
+.cardSection {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}

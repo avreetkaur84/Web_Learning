@@ -1,0 +1,23 @@
+.red{
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.box {
+    border: solid black;
+    background-color: pink;
+}
+
+body {
+    text-align: center;
+}
+
+div {
+    height: 100px;
+    width: 500px;
+    border: 1px solid black;
+    margin: auto;
+}
