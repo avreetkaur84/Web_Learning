@@ -1,4 +1,0 @@
-1. install react - npx create-react-app react-admin
-2. cd react-admin
-3. code . - too open the folder in new window
-4. 

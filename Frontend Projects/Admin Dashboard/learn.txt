@@ -1,2 +1,0 @@
-1. why useMemo hook is used?
-2. 
